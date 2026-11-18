@@ -332,3 +332,22 @@
 | 328            | X109               | NGC 7793             | 无               | 旋涡星系           | 玉夫座         | 23h 58m        | -32°35′      | 9′×6′       | 9.1              | 旋涡星系       |
 
 
+
+---
+
+## 深空天体图像库
+
+本仓库同时托管**预生成的深空天体缩略图**，供「口袋天文台」App 在线拉取。
+
+- **2799 张**，400px / JPEG q70（与 App 内置兜底包同规格）
+- 图像来源：PanSTARRS1 (STScI) 与 DSS2 (STScI/NASA)，详见 `schema.md`
+- 目录：`images/<0-f>/<id>.jpg`（id 的 sha256 首字母分片）
+- 清单：`manifest.json`（含 sha256 / 字节数 / rev，支持增量更新）
+- 星表：`catalog.json`（2799 条，RA/Dec/分类/视场）
+
+国内下载请用 jsDelivr：
+```
+https://cdn.jsdelivr.net/gh/xeecos/DeepskyData@main/manifest.json
+```
+
+数据由 `scripts/gen-dso-repo.py`（在 ch32v467-cam 主仓库）生成。
